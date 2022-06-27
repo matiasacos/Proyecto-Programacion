@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Mangas y Comics Contactos</title>
+</head>
+
+<body class="grid-body">
+
+    <!-- encabezado de la pagina -->
+
+    <header>
+        <h1>Manga y comic</h1>
+        <nav>
+            <ul>
+                <li> <a href="../index.html">Home</a></li>
+                <li><a href="../pages-html/ofertas.html">Ofertas</a></li>
+                <li><a href="../pages-html/mangas.html">Mangas</a></li>
+                <li><a href="../pages-html/comics.html">Comics</a></li>
+                <li><a href="../pages-html/contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- contenido de la pagina -->
+
+    <main>
+        <section>
+
+            <h3>Contactos</h3>
+
+            <div>
+                <form class="formulario">
+                    <div class="grid-nombre">
+                        <label for="campo-nombre">Nombre</label>
+                        <input type="text" id="campo-nombre" placeholder="Nombre">
+                    </div>
+                    <div class="grid-apellido">
+                        <label for="campo-apellido">Apellido</label>
+                        <input type="text" id="campo-apellido" placeholder="Apellido">
+                    </div>
+                    <div class="grid-email">
+                        <label for="campo-email">Email</label>
+                        <input type="text" id="campo-email" placeholder="ejemplo@gmail.com">
+                    </div>
+                    <div class="grid-numero">
+                        <label for="campo-numero">Telefono</label>
+                        <input type="tel" id="campo-numero">
+                    </div>
+                    <div class="grid-mensaje">
+                        <label for="campo-mensaje">Mensaje</label>
+                        <textarea name="campo-mensaje" id="campo-mensaje" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="grid-boton">
+                        <input class="boton" type="submit" value="Enviar Formulario">
+                        <input class="boton" type="reset" value="Borrar Formulario"> 
+                    </div>              
+                </form>
+            </div>
+            
+        </section>
+    </main>
+
+    <!-- final de la pagina -->
+
+    <footer class="footer">
+
+        <div class="pagos">
+            <h4>Metodos de Pago</h4>
+        </div>
+
+        <div class="redesSociales">
+            <h4>Redes Sociales</h4>
+            <i class="bi-instagram"></i>
+            <i class="bi-facebook"></i>
+            <i class="bi-twitter"></i>
+        </div>
+
+        <div class="newsletter">
+            <h4>Newsletter</h4>
+
+            <form>
+
+                <label for="campo-nombre">Nombre y Apellido</label>
+    
+                <input class="name-email" type="text" id="campo-nombre" placeholder="Nombre y Apellido" id="name" name="name">
+    
+                <label for="campo-mail">Email</label>
+    
+                <input class="name-email" type="text" id="campo-mail" placeholder="ejemplo@gmail.com" id="email" name="email">
+    
+                <div>
+                    <input class="enviar" type="submit" value="enviar">
+                </div>
+    
+            </form>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

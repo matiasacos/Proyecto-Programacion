@@ -1,0 +1,305 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;   
+    grid-template: "header" 
+                    "nav" 
+                    "footer" /
+                    auto; 
+}
+    /* ---------------------------------navegador--------------------------------- */
+
+header {
+background-color: red;
+}
+
+h1{
+text-align: center;
+}
+
+h2 {
+    background-color: red;
+}
+
+nav ul li, a{
+display: inline-block;
+text-decoration: none;
+color: black;
+padding: 15px 10px;
+}
+
+.titulodestacado {
+color: red;
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        display:flex
+    }
+
+    p {
+        display: none;
+    }
+
+    .flex {
+        font-family: Arial, Helvetica, sans-serif;
+        flex-direction: column;
+    }
+
+    a {
+        display: flex;
+        margin: 0px 100px;
+    }
+
+    .mangas, .comics{
+        font-size: large;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+    /* ------------------------------main ofertas--------------------------------- */
+
+.ofertas {
+background-color: rgba(0, 0, 0, 0.192);
+padding: 10px;
+text-align: center;
+}
+
+.ofertas-mangas {
+background-color: rgba(0, 0, 0, 0.192);
+padding: 15px 10px;
+text-align: center;
+}
+
+.ofertas-comics {
+background-color: rgba(0, 0, 0, 0.192);
+padding: 15px 10px;
+text-align: center;
+}
+
+.flex {
+display: flex;
+overflow-x: scroll;
+}
+
+.comicbatmansilencio, .comicflashpoint, .mangagoldentime, .comicharleyquinn, .mangaAoashi {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+
+.mangaservanxservice, .mangahaikyu, .mangamaoyu, .mangahajimenoippo, .mangagoblinslayer {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+
+.comicreydeadpool, .comicdeadmanlogan, .comicloscuatrofantasticos, .comicsupervillanos {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+
+.ofertas img {
+max-width: 250px;
+max-height: 345px;
+}
+
+.ofertas-mangas img {
+max-width: 250px;
+max-height: 345px;
+}
+
+.ofertas-comics img {
+max-width: 250px;
+max-height: 345px;
+}
+
+.ofertas a {
+display: block;
+border: solid 3px black;
+padding: 2px 5px;
+background-color: rgba(255, 0, 0, 0.705);
+border-radius: 20px;
+}
+
+.ofertas-mangas a {
+display: block;
+border: solid 3px black;
+padding: 2px 5px;
+background-color: rgba(255, 0, 0, 0.705);
+border-radius: 20px;
+}
+
+.ofertas-comics a {
+display: block;
+border: solid 3px black;
+padding: 2px 5px;
+background-color: rgba(255, 0, 0, 0.705);
+border-radius: 20px;
+}
+
+.ofertas a:hover {
+background-color: red;
+}
+
+.ofertas-mangas a:hover {
+background-color: red;
+}
+
+.ofertas-comics a:hover {
+background-color: red;
+}
+
+    /* ----------------------------main mangas------------------------------- */
+
+.mangas {
+background-color: rgba(0, 0, 0, 0.192);
+padding: 15px 10px;
+text-align: center;
+}
+
+.mangajujutsu, .mangaspyxfamily, .mangaAttack-on-titan, .mangaranking-of-king, .mangademon-slayer {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+
+    /* -----------------------------pagina de mangas----------------- */
+    
+.mangaonepice, .mangakingdom, .mangadatealive,.mangadragonballz, .mangafireforce {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+
+.mangaoverlord, .mangaberserk, .mangafairytail, .mangablackclover, .mangadrstone {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+
+.manga91days, .mangasconception, .mangasyuYuhakusho, .mangastowerofgod, .mangasnoblesse {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+    /* -----------------------------pagina de mangas----------------- */
+
+.mangas img {
+max-width: 250px;
+max-height: 345px;
+}
+
+.mangas a {
+display: block;
+border: solid 3px black;
+padding: 2px 5px;
+background-color: rgba(255, 0, 0, 0.705);
+border-radius: 20px;
+}
+
+.mangas a:hover {
+background-color: red;
+}
+
+
+/* ----------------------------main comic------------------------- */
+
+.comics {
+background-color: rgba(0, 0, 0, 0.192);
+padding: 15px 10px;
+text-align: center;
+}
+
+.comicavenger, .comicCapitanamerica, .comicCarnegaAbsolute, .comicmultiversoOscuro, .comicuniversobatman, .comicbatmansilencio, .comicflashpoint {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+
+    /* --------------------pagina comics------------------------ */
+
+.comichoracero, .comictheadventurebatman, .comicamazingspiderman {
+border: solid 2px black;
+margin: 2px;
+border-radius: 20px;
+}
+
+.comics img {
+max-width: 250px;
+max-height: 345px;
+}
+
+.comics a {
+display: block;
+border: solid 3px black;
+padding: 2px 5px;
+background-color: rgba(255, 0, 0, 0.705);
+border-radius: 20px;
+}
+
+.comics a:hover {
+background-color: red;
+}
+
+    /* ----------------------main contacto----------------------------- */
+
+
+.formulario {
+    background-color: lightblue;
+    display: flex;
+}
+
+h3 {
+    background-color: red;
+    text-align: center;
+}
+
+.boton {
+color: white;
+width: 120px;
+background-color: red;
+}
+
+    /* -------------------------------footer--------------------------- */
+
+.footer {
+background-color: blue;
+padding: 40px;
+text-align: center;
+display: flex;
+justify-content: space-between;
+}
+
+.formulario {
+    flex-wrap: wrap;
+}
+
+.pagos {
+border: solid 4px black;
+}
+
+.redesSociales {
+border: solid 4px black;
+}
+
+.newsletter {
+border: solid 4px black;
+}
+
+.enviar {
+padding: 4px 4px;
+color: white;
+background-color: red;
+}
