@@ -19,10 +19,17 @@ background-color: red;
 
 h1{
 text-align: center;
+text-shadow: 8px 8px 5px white;
 }
 
 h2 {
     background-color: red;
+}
+
+h3 {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
 }
 
 nav ul li, a{
@@ -31,6 +38,8 @@ text-decoration: none;
 color: black;
 padding: 15px 10px;
 }
+
+
 
 .titulodestacado {
 color: red;
@@ -90,24 +99,36 @@ text-align: center;
 .flex {
 display: flex;
 overflow-x: scroll;
+
+-webkit-transition: 0.1s ease-in-out;
+transition: 0.1 ease-in-out;
+}
+
+.flex :hover {
+    -webkit-box-shadow: 0px 0px 20px black;
+    box-shadow: black 0px 0px 10px 8px;   
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 
 .comicbatmansilencio, .comicflashpoint, .mangagoldentime, .comicharleyquinn, .mangaAoashi {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .mangaservanxservice, .mangahaikyu, .mangamaoyu, .mangahajimenoippo, .mangagoblinslayer {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .comicreydeadpool, .comicdeadmanlogan, .comicloscuatrofantasticos, .comicsupervillanos {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .ofertas img {
@@ -130,7 +151,7 @@ display: block;
 border: solid 3px black;
 padding: 2px 5px;
 background-color: rgba(255, 0, 0, 0.705);
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .ofertas-mangas a {
@@ -138,7 +159,7 @@ display: block;
 border: solid 3px black;
 padding: 2px 5px;
 background-color: rgba(255, 0, 0, 0.705);
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .ofertas-comics a {
@@ -146,7 +167,7 @@ display: block;
 border: solid 3px black;
 padding: 2px 5px;
 background-color: rgba(255, 0, 0, 0.705);
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .ofertas a:hover {
@@ -167,12 +188,15 @@ background-color: red;
 background-color: rgba(0, 0, 0, 0.192);
 padding: 15px 10px;
 text-align: center;
+
+-webkit-transition: 0.1s ease-in-out;
+transition: 0.1 ease-in-out;
 }
 
 .mangajujutsu, .mangaspyxfamily, .mangaAttack-on-titan, .mangaranking-of-king, .mangademon-slayer {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
 
     /* -----------------------------pagina de mangas----------------- */
@@ -180,19 +204,19 @@ border-radius: 20px;
 .mangaonepice, .mangakingdom, .mangadatealive,.mangadragonballz, .mangafireforce {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .mangaoverlord, .mangaberserk, .mangafairytail, .mangablackclover, .mangadrstone {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .manga91days, .mangasconception, .mangasyuYuhakusho, .mangastowerofgod, .mangasnoblesse {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
     /* -----------------------------pagina de mangas----------------- */
 
@@ -206,7 +230,7 @@ display: block;
 border: solid 3px black;
 padding: 2px 5px;
 background-color: rgba(255, 0, 0, 0.705);
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .mangas a:hover {
@@ -225,7 +249,7 @@ text-align: center;
 .comicavenger, .comicCapitanamerica, .comicCarnegaAbsolute, .comicmultiversoOscuro, .comicuniversobatman, .comicbatmansilencio, .comicflashpoint {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
 
     /* --------------------pagina comics------------------------ */
@@ -233,7 +257,7 @@ border-radius: 20px;
 .comichoracero, .comictheadventurebatman, .comicamazingspiderman {
 border: solid 2px black;
 margin: 2px;
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .comics img {
@@ -246,7 +270,7 @@ display: block;
 border: solid 3px black;
 padding: 2px 5px;
 background-color: rgba(255, 0, 0, 0.705);
-border-radius: 20px;
+border-radius: 15px;
 }
 
 .comics a:hover {
