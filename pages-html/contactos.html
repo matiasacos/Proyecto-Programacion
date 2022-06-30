@@ -4,72 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <title>Mangas y Comics Contactos</title>
 </head>
 
-<body class="grid-body">
+<body">
 
     <!-- encabezado de la pagina -->
 
     <header>
         <h1>Manga y comic</h1>
-        <nav>
-            <ul>
-                <li> <a href="../index.html">Home</a></li>
+        <nav class="top-nav navbar navbar-expand-lg">
+
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            
+            <ul class="menu navbar-nav me-auto mb-2 mb-lg-0">
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="../pages-html/ofertas.html">Ofertas</a></li>
                 <li><a href="../pages-html/mangas.html">Mangas</a></li>
                 <li><a href="../pages-html/comics.html">Comics</a></li>
                 <li><a href="../pages-html/contactos.html">Contactos</a></li>
             </ul>
+            <form action="" class="d-flex form">
+                <input type="search" class="form-control me-2" placeholder="buscador">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
         </nav>
     </header>
 
     <!-- contenido de la pagina -->
-
-    <main>
-        <section>
-
-            <h3>Contactos</h3>
-
-            <div>
-                <form class="formulario">
-                    <div class="grid-nombre">
-                        <label for="campo-nombre">Nombre</label>
-                        <input type="text" id="campo-nombre" placeholder="Nombre">
-                    </div>
-                    <div class="grid-apellido">
-                        <label for="campo-apellido">Apellido</label>
-                        <input type="text" id="campo-apellido" placeholder="Apellido">
-                    </div>
-                    <div class="grid-email">
-                        <label for="campo-email">Email</label>
-                        <input type="text" id="campo-email" placeholder="ejemplo@gmail.com">
-                    </div>
-                    <div class="grid-numero">
-                        <label for="campo-numero">Telefono</label>
-                        <input type="tel" id="campo-numero">
-                    </div>
-                    <div class="grid-mensaje">
-                        <label for="campo-mensaje">Mensaje</label>
-                        <textarea name="campo-mensaje" id="campo-mensaje" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="grid-boton">
-                        <input class="boton" type="submit" value="Enviar Formulario">
-                        <input class="boton" type="reset" value="Borrar Formulario"> 
-                    </div>              
-                </form>
+    <body class="bg-secondary">
+        <section class="container">
+            <div class="row my-5">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <form action="" method="post" class="formulariocss">
+                        <h4 class="display-5 text-center">Contacto</h4>
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="introduzca su nombre" maxlength="20" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder="introduzca su apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="form-control" name="email" id="email" placeholder="ejemplo@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="sexo">Sexo</label>
+                            <select name="sexo" id="sexo">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="NoBinario">NoBinario</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea name="mensaje" id="mensaje" class="form-control" placeholder="ej: hola aca puedo escribir."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <a href="" class="btn btn-danger">Limpiar</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            
         </section>
-    </main>
-
+    </body>
     <!-- final de la pagina -->
 
     <footer class="footer">
 
         <div class="pagos">
             <h4>Metodos de Pago</h4>
+            <i class="bi-bank"></i>
+            <i class="bi-paypal"></i>
+            <i class="bi-credit-card-fill"></i>
         </div>
 
         <div class="redesSociales">
@@ -100,6 +116,7 @@
         </div>
     </footer>
     
+    <script src="./javascript/bootstrap.js"></script>
 </body>
 
 </html>
