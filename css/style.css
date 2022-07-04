@@ -466,13 +466,6 @@ background-color: red;
 
     /* -------------------------------footer--------------------------- */
 
-.footer {
-background-color: blue;
-padding: 40px;
-text-align: center;
-display: flex;
-justify-content: space-between;
-}
 
 .formulario {
     flex-wrap: wrap;
@@ -488,17 +481,6 @@ justify-content: space-between;
     box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
 }
 
-.pagos {
-border: solid 4px black;
-}
-
-.redesSociales {
-border: solid 4px black;
-}
-
-.newsletter {
-border: solid 4px black;
-}
 /* ----------------- animaciones ----------------------- */
 
 .mangajujutsu :hover{
