@@ -162,39 +162,40 @@
     <!-- final de la pagina -->
 
     <footer class="footer">
+        <div class="row">
+            <div class="col-xs-6 pagos">
+                <h4>Metodos de Pago</h4>
+                <i class="bi-bank"></i>
+                <i class="bi-paypal"></i>
+                <i class="bi-credit-card-fill"></i>
+            </div>
 
-        <div class="pagos">
-            <h4>Metodos de Pago</h4>
-            <i class="bi-bank"></i>
-            <i class="bi-paypal"></i>
-            <i class="bi-credit-card-fill"></i>
-        </div>
+            <div class="col-xs-6 redesSociales">
+                <h4>Redes Sociales</h4>
+                <i class="bi-instagram"></i>
+                <i class="bi-facebook"></i>
+                <i class="bi-twitter"></i>
+            </div>
 
-        <div class="redesSociales">
-            <h4>Redes Sociales</h4>
-            <i class="bi-instagram"></i>
-            <i class="bi-facebook"></i>
-            <i class="bi-twitter"></i>
-        </div>
+            <div class="newsletter">
+                <h4>Newsletter</h4>
 
-        <div class="newsletter">
-            <h4>Newsletter</h4>
+                <form>
 
-            <form>
+                    <label for="campo-nombre">Nombre y Apellido</label>
 
-                <label for="campo-nombre">Nombre y Apellido</label>
+                    <input class="name-email" type="text" id="campo-nombre" placeholder="Nombre y Apellido" id="name" name="name">
 
-                <input class="name-email" type="text" id="campo-nombre" placeholder="Nombre y Apellido" id="name" name="name">
+                    <label for="campo-mail">Email</label>
 
-                <label for="campo-mail">Email</label>
+                    <input class="name-email" type="text" id="campo-mail" placeholder="ejemplo@gmail.com" id="email" name="email">
 
-                <input class="name-email" type="text" id="campo-mail" placeholder="ejemplo@gmail.com" id="email" name="email">
+                    <div>
+                        <input class="enviar" type="submit" value="enviar">
+                    </div>
 
-                <div>
-                    <input class="enviar" type="submit" value="enviar">
-                </div>
-
-            </form>
+                </form>
+            </div>
         </div>
     </footer>
     <script src="./javascript/bootstrap.js"></script>
