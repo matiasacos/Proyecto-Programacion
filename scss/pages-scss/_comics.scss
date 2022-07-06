@@ -1,0 +1,42 @@
+.comics {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 15px 10px;
+    text-align: center;
+    }
+    
+    .comicavenger, .comicCapitanamerica, .comicCarnegaAbsolute, .comicmultiversoOscuro, .comicuniversobatman, .comicbatmansilencio, .comicflashpoint {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+        
+    .comichoracero, .comictheadventurebatman, .comicamazingspiderman {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+    
+    .comics img {
+    max-width: 250px;
+    max-height: 345px;
+    }
+    
+    .comics a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+    }
+    
+    .comics a:hover {
+    background-color: red;
+    }

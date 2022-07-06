@@ -1,0 +1,804 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template: "header" "nav" "footer"/auto;
+  }
+  
+  header {
+    background-color: red;
+  }
+  
+  h1 {
+    text-align: center;
+    text-shadow: 8px 8px 5px white;
+  }
+  
+  h2 {
+    background-color: red;
+  }
+  
+  h3 {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button, .menu-button::before, .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: "";
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: "";
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  ul li {
+    display: flex;
+  }
+  ul a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .titulodestacado {
+    color: red;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #333;
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: white;
+      background-color: #222;
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+    }
+    .flex {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    a {
+      display: flex;
+      margin: 0px 100px;
+    }
+    .mangas, .comics {
+      font-size: large;
+    }
+    p {
+      display: none;
+    }
+    .footer {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 940px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #333;
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: white;
+      background-color: #222;
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+    }
+    .flex {
+      flex-direction: column;
+    }
+    a {
+      display: flex;
+      margin: 0px 100px;
+    }
+    .mangas, .comics {
+      font-size: large;
+    }
+    .footer {
+      flex-wrap: wrap;
+    }
+  }
+  .ofertas {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .ofertas-mangas {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 15px 10px;
+    text-align: center;
+  }
+  
+  .ofertas-comics {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 15px 10px;
+    text-align: center;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: baseline;
+  }
+  .flex a {
+    color: black;
+  }
+  
+  .comicbatmansilencio, .comicflashpoint, .mangagoldentime, .comicharleyquinn, .mangaAoashi {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaservanxservice, .mangahaikyu, .mangamaoyu, .mangahajimenoippo, .mangagoblinslayer {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicreydeadpool, .comicdeadmanlogan, .comicloscuatrofantasticos, .comicsupervillanos {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .ofertas img {
+    max-width: 250px;
+    max-height: 345px;
+  }
+  
+  .ofertas-mangas img {
+    max-width: 250px;
+    max-height: 345px;
+  }
+  
+  .ofertas-comics img {
+    max-width: 250px;
+    max-height: 345px;
+  }
+  
+  .ofertas a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+  }
+  
+  .ofertas-mangas a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+  }
+  
+  .ofertas-comics a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+  }
+  
+  .ofertas a:hover {
+    background-color: red;
+  }
+  
+  .ofertas-mangas a:hover {
+    background-color: red;
+  }
+  
+  .ofertas-comics a:hover {
+    background-color: red;
+  }
+  
+  .mangas {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 15px 10px;
+    text-align: center;
+  }
+  
+  .mangajujutsu, .mangaspyxfamily, .mangaAttack-on-titan, .mangaranking-of-king, .mangademon-slayer {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaonepice, .mangakingdom, .mangadatealive, .mangadragonballz, .mangafireforce {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaoverlord, .mangaberserk, .mangafairytail, .mangablackclover, .mangadrstone {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .manga91days, .mangasconception, .mangasyuYuhakusho, .mangastowerofgod, .mangasnoblesse {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangas img {
+    max-width: 250px;
+    max-height: 345px;
+  }
+  
+  .mangas a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+  }
+  
+  .mangas a:hover {
+    background-color: red;
+  }
+  
+  .comics {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 15px 10px;
+    text-align: center;
+  }
+  
+  .comicavenger, .comicCapitanamerica, .comicCarnegaAbsolute, .comicmultiversoOscuro, .comicuniversobatman, .comicbatmansilencio, .comicflashpoint {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comichoracero, .comictheadventurebatman, .comicamazingspiderman {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comics img {
+    max-width: 250px;
+    max-height: 345px;
+  }
+  
+  .comics a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+  }
+  
+  .comics a:hover {
+    background-color: red;
+  }
+  
+  .formulario {
+    flex-wrap: wrap;
+  }
+  
+  .formulariocss {
+    max-width: 25em;
+    padding: 1.3em;
+    margin: 0 auto;
+    background-color: rgba(120, 119, 123, 0.3);
+    font-weight: bold;
+    border-radius: 0.5em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
+  }
+  
+  .mangajujutsu :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaspyxfamily :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaAttack-on-titan :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaranking-of-king :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangademon-slayer :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangagoldentime :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaAoashi :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaservanxservice :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangahaikyu :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangahajimenoippo :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangagoblinslayer :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaonepice :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangakingdom :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangadatealive :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangadragonballz :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangafireforce :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaoverlord :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangaberserk :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangafairytail :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangablackclover :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangadrstone :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .manga91days :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangasconception :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangasyuYuhakusho :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangastowerofgod :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .mangasnoblesse :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicavenger :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicCapitanamerica :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicCarnegaAbsolute :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicmultiversoOscuro :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicuniversobatman :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicbatmansilencio :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicflashpoint :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicharleyquinn {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicreydeadpool :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicdeadmanlogan :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicloscuatrofantasticos :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicsupervillanos :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comichoracero :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comictheadventurebatman :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .comicamazingspiderman :hover {
+    -webkit-box-shadow: 0 0 20px #111;
+    box-shadow: #3a3a3a 0px 0px 10px 2px;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }

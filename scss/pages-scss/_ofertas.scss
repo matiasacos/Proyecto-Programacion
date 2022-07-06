@@ -1,0 +1,109 @@
+.ofertas {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 10px;
+    text-align: center;
+    }
+    
+    .ofertas-mangas {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 15px 10px;
+    text-align: center;
+    }
+    
+    .ofertas-comics {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 15px 10px;
+    text-align: center;
+    }
+    
+    .flex {
+        display: flex;
+        align-items: baseline;
+            a{
+                color: black;
+            }
+    }
+    
+    .comicbatmansilencio, .comicflashpoint, .mangagoldentime, .comicharleyquinn, .mangaAoashi {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+    
+    .mangaservanxservice, .mangahaikyu, .mangamaoyu, .mangahajimenoippo, .mangagoblinslayer {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+    
+    .comicreydeadpool, .comicdeadmanlogan, .comicloscuatrofantasticos, .comicsupervillanos {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+    
+    .ofertas img {
+    max-width: 250px;
+    max-height: 345px;
+    }
+    
+    .ofertas-mangas img {
+    max-width: 250px;
+    max-height: 345px;
+    }
+    
+    .ofertas-comics img {
+    max-width: 250px;
+    max-height: 345px;
+    }
+    
+    .ofertas a{
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+    }
+    
+    .ofertas-mangas a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+    }
+    
+    .ofertas-comics a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+    }
+    
+    .ofertas a:hover {
+    background-color: red;
+    }
+    
+    .ofertas-mangas a:hover {
+    background-color: red;
+    }
+    
+    .ofertas-comics a:hover {
+    background-color: red;
+    }

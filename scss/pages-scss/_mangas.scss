@@ -1,0 +1,60 @@
+.mangas {
+    background-color: rgba(0, 0, 0, 0.192);
+    padding: 15px 10px;
+    text-align: center;
+    }
+    
+    .mangajujutsu, .mangaspyxfamily, .mangaAttack-on-titan, .mangaranking-of-king, .mangademon-slayer {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+        
+    .mangaonepice, .mangakingdom, .mangadatealive,.mangadragonballz, .mangafireforce {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+    
+    .mangaoverlord, .mangaberserk, .mangafairytail, .mangablackclover, .mangadrstone {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+    
+    .manga91days, .mangasconception, .mangasyuYuhakusho, .mangastowerofgod, .mangasnoblesse {
+    border: solid 2px black;
+    margin: 2px;
+    border-radius: 15px;
+    
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+    }
+    
+    .mangas img {
+    max-width: 250px;
+    max-height: 345px;
+    }
+    
+    .mangas a {
+    text-decoration: none;
+    display: block;
+    border: solid 3px black;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    background-color: rgba(255, 0, 0, 0.705);
+    border-radius: 15px;
+    }
+    
+    .mangas a:hover {
+    background-color: red;
+    }
